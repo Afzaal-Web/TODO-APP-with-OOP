@@ -96,8 +96,10 @@ window.onload = renderTasks;
 clearAllBtn.addEventListener('click', () => {
     taskManager.tasks = [];
     taskManager.saveToLocalStorage();
+     dummyTaskBtn.style.display = "block"
     renderTasks();
 });
+
 
 dummyTaskBtn.addEventListener('click', () => {
     const dummyData = [
@@ -188,6 +190,10 @@ function renderTask(task) {
         taskManager.deleteTask(task.id);
         renderFilteredTasks();
     });
+
+    if(taskManager.getAllTasks().length > 0){
+    dummyTaskBtn.style.display = "none"
+}
 }
 
 function updateCount(array) {
