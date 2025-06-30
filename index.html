@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/0385295c3a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="app">
     <h1>To-Do List</h1>
@@ -41,10 +43,21 @@
         <option value="Study">Study</option>
       </select>
     </div>
+    <div id="task-counts">
+      <p>Total Tasks: <span id="total-count">0</span></p>
+      <p>Completed: <span id="completed-count">0</span></p>
+      <p>Pending: <span id="incomplete-count">0</span></p>
+    </div>
+    <div class="btns">
+    <button id="clearAllBtn">Clear All Tasks</button>
+<button id="dummyTaskBtn">Add Dummy Tasks</button>
+    </div>
+
 
     <ul id="taskList"></ul>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
